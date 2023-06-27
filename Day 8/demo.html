@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+
+    <table style="border: 1px solid black; row-gap: 10px; column-width: auto;">
+        <tr>
+            <th>Array :</th>
+            <th><input type="textbox" id="array" ></th>
+        </tr>
+        <tr>
+            <th>Push :</th>
+            <th><input type="text" placeholder="Enter the push" id="push"><button id="push_btn">PUSH</button><br>
+            <h4>New element will be add at Last</h4></th>
+        </tr>
+        <tr>
+            <th>POP :</th>
+            <td><button id="pop_btn">Click to POP</button>
+            <h4>Find element of the Array will be remove</h4></th>
+        </tr>
+        <tr>
+            <th>UnShift :</th>
+            <th><input type="text" placeholder="Enter the UnShift" id="unshift"><button id="unshift_btn">Unshift</button><br>
+            <h4>New element will be added to First</h4></th>
+        </tr>
+        <tr>
+            <th>Shift</th>
+            <th><button id="shift">Click to Shift</button><br>
+            <h4>First element of the array eill be remove</h4></th>
+        </tr>
+        <tr>
+            <th>Sort :</th>
+            <th><button id="sort">Sort Array</button></th>
+        </tr>
+        <tr>
+            <th>Reverse :</th>
+            <th><button id="reverse">Reverse</button></th>
+        </tr>
+        <tr>
+            <th>Concat :</th>
+            <td><input type="text" id="merge"><button id="marge_btn">Manage Array</button>
+            <br>
+            <input type="textbox" id="merge1"></td>
+        </tr>
+    </table>
+</center>
+
+<script>
+    var array = document.getElementById("array");
+    var push = document.getElementById("push");
+    var array1 = ["Prince","malaviya",19,"male","ahmedabad"];
+    var push_btn = document.getElementById("push_btn");
+    var pop_btn = document.getElementById("pop_btn");
+    var unshift = document.getElementById("unshift");
+    var unshift_btn = document.getElementById("unshift_btn");
+    var shift = document.getElementById("shift");
+    var sort = document.getElementById("sort");
+    var reverse = document.getElementById("reverse");
+    var merge = document.getElementById("merge");
+    var merge1 = document.getElementById("merge1");
+    var merge_btn = document.getElementById("merge_btn");
+
+    array.value = array1;
+    push_btn.addEventListener("click",()=>{
+        array1.push(push.value);
+        array.value = array1;
+    });
+    pop_btn.addEventListener("click",()=>{
+        array1.pop();
+        array.value=array1;
+    });
+    unshift_btn.addEventListener("click",()=>{
+        array1.unshift(unshift.value);
+        array.value=array1;
+    });
+    shift.addEventListener("click",()=>{
+        array1.shift();
+        array.value=array1;
+    });
+    sort.addEventListener("click",()=>{
+        array1.sort();
+        array.value=array1;
+    }); 
+    reverse.addEventListener("click",()=>{
+        array1.reverse();
+        array.value=array1;
+    })
+    var data =["mahesh","panchal",25,"male"]
+        merge.value = data;
+
+        marge_btn.addEventListener("click",()=>{
+        var merge = array1.concat(data);
+        merge1.value=merge;
+    });
+
+</script>
+</body>
+</html
